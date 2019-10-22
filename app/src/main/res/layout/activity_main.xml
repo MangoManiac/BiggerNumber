@@ -7,12 +7,62 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:id="@+id/mainView"
+        android:layout_width="386dp"
+        android:layout_height="39dp"
+        android:text="Score Board"
+        android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <Button
+        android:id="@+id/buttonTwo"
+        android:layout_width="166dp"
+        android:layout_height="63dp"
+        android:layout_marginEnd="28dp"
+        android:onClick="buttonTwo_click"
+        android:text="Number Two"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonOne"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonOne"
+        android:layout_width="166dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="24dp"
+        android:onClick="buttonOne_click"
+        android:text="Number One"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonTwo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/numberOneView"
+        android:layout_width="164dp"
+        android:layout_height="32dp"
+        android:text="First Number"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/buttonOne"
+        app:layout_constraintEnd_toStartOf="@+id/numberTwoView"
+        app:layout_constraintHorizontal_bias="0.654"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.954" />
+
+    <TextView
+        android:id="@+id/numberTwoView"
+        android:layout_width="164dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="28dp"
+        android:text="Second Number"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/numberOneView"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
